@@ -18,7 +18,7 @@ function Login() {
           if(email=="admin@gmail.com" && password=="admin"){
             nav("/admin");
           }
-          const res = await fetch("https://appbackend-mrpn.onrender.com/login", {
+          const res = await fetch("/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
