@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Footer from '../Homepage/footer';
 import Navbar from '../Homepage/navbar';
-
+import { useNavigate } from 'react-router';
 function Feedback  ()  {
+      const nav=useNavigate();
     const [Error, setError] = useState();
     const handleSubmit= async (e)=>
     {
@@ -26,7 +27,7 @@ function Feedback  ()  {
         if(mes.error){
           setError(mes.error);
         }else{
-          window.location.href = "/recuter1";
+          nav( '/recuter1');
         }
       }
       catch(err)
