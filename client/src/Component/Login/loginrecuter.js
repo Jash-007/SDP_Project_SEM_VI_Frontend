@@ -1,6 +1,7 @@
 import React ,{useState}from 'react'
-
+import { useNavigate } from 'react-router';
 function LoginR  ()  {
+    const nav=useNavigate();
     const [Data, setData] = useState({ email: "", name: "" });
     const [Error, setError] = useState();
     const handleChange = (e) => {
@@ -28,7 +29,7 @@ function LoginR  ()  {
           if(y.error){
             setError(y.error);
           }else{
-            window.location.href = "/";
+            nav( '/Frontpage');
           }
         } catch (error) {
             console.log(error);
