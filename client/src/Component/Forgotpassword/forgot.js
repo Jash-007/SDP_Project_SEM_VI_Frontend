@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 function ForgotPass  ()  {
+    const nav = useNavigate();
     const [error, setError] = useState("");
   
     const [Data, setData] = useState({ 
@@ -33,7 +35,7 @@ function ForgotPass  ()  {
           if(mes.error){
             setError(mes.error);
           }else{
-            window.location.href = "/Checkmail";
+            nav('/Checkmail');
           }
         }
         catch(err)
