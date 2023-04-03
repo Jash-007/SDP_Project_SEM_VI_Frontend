@@ -1,11 +1,13 @@
 import React from 'react'
 import './home.css'
+import {useNavigate} from 'react-router'
 function Homeoption  ()  {
+    const nav= useNavigate();
     const handleuser = () => {
-      window.location.href = "/sigin"
+     nav( '/sigin')
     }
     const handleguider = () => {
-        window.location.href = "/recuter"
+        nav( '/recuter')
       }
   return (
     <>
