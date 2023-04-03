@@ -7,7 +7,9 @@ import {
     MDBBtn
   } from 'mdb-react-ui-kit';
 import Navbar1 from './navbar1';
+import { useNavigate } from 'react-router';
 function Recuter() {
+    const nav = useNavigate();
     const [Error, setError] = useState();
   const handleSubmit= async (e)=>
   {
@@ -33,7 +35,7 @@ function Recuter() {
       if(mes.error){
         setError(mes.error);
       }else{
-        window.location.href = "/Frontpage";
+        nav('/Frontpage');
       }
     }
     catch(err)
