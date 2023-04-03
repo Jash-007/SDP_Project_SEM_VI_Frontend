@@ -20,7 +20,7 @@ function ForgotPass  ()  {
         e.preventDefault();
         try {
           const { email } = Data;
-          const res = await fetch("/forgotpass", {
+          const res = await fetch("https://appbackend-mrpn.onrender.com/forgotpass", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
