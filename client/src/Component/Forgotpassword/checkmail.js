@@ -1,8 +1,9 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router'
 function Checkmail  ()  {
+    const nav= useNavigate()
     const handle=()=>{
-        window.location.href="/login"
+        nav('/login')
     }
   return (
     <div>
