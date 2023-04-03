@@ -13,7 +13,7 @@ const Sigin = () => {
     e.preventDefault();
     try {
       const { name,email,number,password,workstatus } = Data;
-      const res = await fetch("/signup", {
+      const res = await fetch("https://appbackend-mrpn.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
