@@ -238,7 +238,7 @@ const navigation = useNavigate()
 
  
   useEffect(() => {
-    axios.get("/admin").then(
+    axios.get("https://appbackend-mrpn.onrender.com/admin").then(
       (res) => {
         setUsers({ g: res.data });
         console.log(res.data)
@@ -249,7 +249,7 @@ const navigation = useNavigate()
     );
   },[]);
   useEffect(() => {
-    axios.get("/adminrecuter").then(
+    axios.get("https://appbackend-mrpn.onrender.com/adminrecuter").then(
       (res) => {
         setRecuter({ r: res.data });
         console.log(res.data)
@@ -278,7 +278,7 @@ const navigation = useNavigate()
   const createItem = async () => {
     console.log("ADD")
     try {
-      const response = await axios.post('/adminadd', { name: newItem.name, email: newItem.email, number: newItem.number });
+      const response = await axios.post('https://appbackend-mrpn.onrender.com/adminadd', { name: newItem.name, email: newItem.email, number: newItem.number });
       
       setNewItem(response);
     } catch (error) {
@@ -288,7 +288,7 @@ const navigation = useNavigate()
   const createRItem = async () => {
     console.log("ADDR")
     try {
-      const response = await axios.post('/adminrecuteradd', { name: newRItem.name, email: newRItem.email, companyname: newRItem.companyname,like:0,dislike:0 });
+      const response = await axios.post('https://appbackend-mrpn.onrender.com/adminrecuteradd', { name: newRItem.name, email: newRItem.email, companyname: newRItem.companyname,like:0,dislike:0 });
       
       setNewItem(response);
     } catch (error) {
@@ -299,7 +299,7 @@ const navigation = useNavigate()
     try {
       console.log("delete")
       // console.log(user);
-      const res=await axios.post("/admindelete",{_id:user});
+      const res=await axios.post("https://appbackend-mrpn.onrender.com/admindelete",{_id:user});
       // const y=await res.json();
       console.log(res);
     } catch (error) {
@@ -310,7 +310,7 @@ const navigation = useNavigate()
     try {
       console.log("delete")
       // console.log(user);
-      const res=await axios.post("/adminrecuterdelete",{_id:recuter});
+      const res=await axios.post("https://appbackend-mrpn.onrender.com/adminrecuterdelete",{_id:recuter});
       // const y=await res.json();
       console.log(res);
     } catch (error) {
@@ -334,7 +334,7 @@ const navigation = useNavigate()
     console.log("sear")
    
     try {
-      const response = await axios.post("/search", { name: user });
+      const response = await axios.post("https://appbackend-mrpn.onrender.com/search", { name: user });
       alert("name:",response.name,"is valid name");
       setSearchItem({name: response.data.name,email: response.data.email,number: response.data.number});
       console.log(searchItem)
