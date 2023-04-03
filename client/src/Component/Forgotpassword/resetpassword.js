@@ -20,7 +20,7 @@ function ResetPassword  ()  {
         try {
           const { email, password } = Data;
           
-          const res = await fetch("/updatepassword", {
+          const res = await fetch("https://appbackend-mrpn.onrender.com/updatepassword", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
