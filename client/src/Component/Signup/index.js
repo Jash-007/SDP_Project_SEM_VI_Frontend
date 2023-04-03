@@ -30,7 +30,7 @@ const Sigin = () => {
       if(mes.error){
         setError(mes.error);
       }else{
-        window.location.href = "/login";
+        nav('/login');
       }
     }
     catch(err)
