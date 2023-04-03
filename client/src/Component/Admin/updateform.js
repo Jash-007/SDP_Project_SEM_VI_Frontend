@@ -37,7 +37,7 @@ function UpdateForm  (props)  {
       const updateItem = async (item) => {
         try {
           console.log('item',item)
-            const response = await axios.post("/adminedit", {id:location.state.item.item,users:users});
+            const response = await axios.post("https://appbackend-mrpn.onrender.com/adminedit", {id:location.state.item.item,users:users});
             console.log(response);
             // const updatedItems = users.map((i) =>
             //   i._id === response.data._id ? response.data : i
