@@ -11,7 +11,7 @@ function Feedback  ()  {
       e.preventDefault();
       try {
         const { name,email,message } = Data;
-        const res = await fetch("/feedback", {
+        const res = await fetch("https://appbackend-mrpn.onrender.com/feedback", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
