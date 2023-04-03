@@ -6,7 +6,7 @@ const Guider = () => {
         g:[]
       });
       useEffect(() => {
-        axios.get("/vrecuter").then(
+        axios.get("https://appbackend-mrpn.onrender.com/vrecuter").then(
           (res) => {
            
         
