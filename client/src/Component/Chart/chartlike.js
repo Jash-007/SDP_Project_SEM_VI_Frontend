@@ -27,7 +27,7 @@ function Chartlike  ()  {
     console.log(location.state.item)
     
     const dota=async (gf)=>{
-      const response = await axios.post("/adminrecuterview", {id:location.state.item,users:users});
+      const response = await axios.post("https://appbackend-mrpn.onrender.com/adminrecuterview", {id:location.state.item,users:users});
       console.log(response);
       
       setUsers({ ['name']: response.data[0].name,['workstatus']:response.data[0].workstatus,['link']:response.data[0].link,['suggestion']: response.data[0].suggestion,['email']:response.data[0].email,['companyname']:response.data[0].companyname,['like']:response.data[0].like,['dislike']:response.data[0].dislike });
