@@ -14,7 +14,7 @@ const Pastrecuter = (props) => {
         try {
             const  user=localStorage.getItem("ceremdendial");
             const user_id=user._id;
-          const response = await axios.post("/like",{id: props._id,user_id:user_id});
+          const response = await axios.post("https://appbackend-mrpn.onrender.com/like",{id: props._id,user_id:user_id});
          setLikes(response.props.likes);
           console.log("like send")
         } catch (error) {
@@ -26,7 +26,7 @@ const Pastrecuter = (props) => {
         try {
           const  user=localStorage.getItem("ceremdendial");
             const user_id=user._id;
-          const response = await axios.post("/dislike",{id: props._id,user_id:user_id});
+          const response = await axios.post("https://appbackend-mrpn.onrender.com/dislike",{id: props._id,user_id:user_id});
           setDislikes(response.props.dislikes);
           console.log("dislike send")
         } catch (error) {
