@@ -1,11 +1,12 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router'
 function Navbar1  ()  {
+  const nav = useNavigate()
   const handlelogin = () => {
-    window.location.href = "/loginrecuter"
+    nav( '/loginrecuter')
   }
   const handlesignup = () => {
-    window.location.href = "/recuter"
+     nav( '/recuter');
   }
   return (
     <div>
