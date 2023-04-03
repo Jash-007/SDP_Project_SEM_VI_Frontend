@@ -17,7 +17,7 @@ function Recuter() {
     e.preventDefault();
     try {
       const { name,email,companyname,suggestion,link,workstatus } = Data;
-      const res = await fetch("/recuter", {
+      const res = await fetch("https://appbackend-mrpn.onrender.com/recuter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
