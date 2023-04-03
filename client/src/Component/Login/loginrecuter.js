@@ -11,7 +11,7 @@ function LoginR  ()  {
         e.preventDefault();
         try {
           const { email, name } = Data;
-          const res = await fetch("/loginrecuter", {
+          const res = await fetch("https://appbackend-mrpn.onrender.com/loginrecuter", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
