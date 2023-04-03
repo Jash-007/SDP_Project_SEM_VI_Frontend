@@ -11,7 +11,7 @@ function Navbar2  ()  {
     setLoading(true);
     e.preventDefault();
     try {
-      const response = await axios.get('downloaddata', {
+      const response = await axios.get('https://appbackend-mrpn.onrender.com/downloaddata', {
         responseType: 'arraybuffer'
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -32,7 +32,7 @@ function Navbar2  ()  {
     setLoading(true);
     e.preventDefault();
     try {
-      const response = await axios.get('Rdownloaddata', {
+      const response = await axios.get('https://appbackend-mrpn.onrender.com/Rdownloaddata', {
         responseType: 'arraybuffer'
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
